@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 <title>Заполните форму</title>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" />
@@ -16,73 +16,233 @@
 </style>
 </head>
 <body>
+
+<form class="" action="data" method="post">
+</form>
   <h1 align="center">
       <span style="color: #ff7e00">Заполните данные о состоянии ребенка </span>
       <br>
       <span style="font-size: 15px;color: black; font-weight: lighter;"></span>
   </h1>
-  <center><h2>Введите данные вручную или же используйте голосовой ввод</h2></center></br>
+  <center><h3>Введите данные вручную или же используйте голосовой ввод</h3></center>
+  <br>
 
   <div id="result1" align="center">
       <br>
-        <form action = "http://localhost:5000/result" method = "POST">
-            <br>
+        <form action = "result" method = "POST">
             <code id="result">Запись ...</code>
             <button type="button" class="btn btn-warning" id="toggle">Ввести данные голосом</button>
             <br>
-            <label style="font-size: 15px; color: black">ПП<input type="number" class="form-control" size="40" maxlength=100 name = "pp" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">ФИО<input type="text" class="form-control" size="40" maxlength=100 name = "fio" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Пол<input type="text" class="form-control" size="40" maxlength=100 name = "pol" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Дата рождения<input type="text" class="form-control" size="40" maxlength=100 name = "data_r" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Дата осмотра<input type="text" class="form-control" size="40" maxlength=100 name = "data_osmotra" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Длина тела, см<input type="text" class="form-control" size="40" maxlength=100 name = "dlina_tela" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Масса тела, кг<input type="text" class="form-control" size="40" maxlength=100 name = "massa_tela" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность грудной клетки, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_grudnoi_kletki" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность талии, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_talii" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность правого плеча, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_pravogo_plecha" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность левого плеча, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_levogo_plecha" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность бедер, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_beder" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность шеи, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_shei" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Окружность запястья, см<input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_zapastya" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Жизненная емкость легких, л<input type="text" class="form-control" size="40" maxlength=100 name = "zhiznennaya_emkost_legk" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Динамометрия правой кисти, кг<input type="text" class="form-control" size="40" maxlength=100 name = "dinamometriya_pravoy_kisti" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Динамометрия левой кисти, кг<input type="text" class="form-control" size="40" maxlength=100 name = "dinamometriya_levoy_kisti" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Сист.артериальное давление, мм рт.ст.<input type="text" class="form-control" size="40" maxlength=100 name = "sist_arter_davlenie" /></label>
-            <br>
-             <label style="font-size: 15px; color: black">Диаст.артериальное давление, мм рт.ст.<input type="text" class="form-control" size="40" maxlength=100 name = "dist_arter_davlenie" /></label>
-            <br>
-             <label style="font-size: 15px; color: black">Частота сердечных сокращений<input type="text" class="form-control" size="40" maxlength=100 name = "chastota_serd_sokr" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Толщина жировой складки (живот), см<input type="text" class="form-control" size="40" maxlength=100 name = "tolshina_zhirovoy_skladki_zhivot" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Толщина жировой складки (плечо), см<input type="text" class="form-control" size="40" maxlength=100 name = "tolshina_zhirovoy_skladki_plecho" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Толщина жировой складки (спина), см<input type="text" class="form-control" size="40" maxlength=100 name = "tolshina_zhirovoy_skladki_spina" /></label>
-            <br>
-            <label style="font-size: 15px; color: black">Тип телосложения<input type="text" class="form-control" size="40" maxlength=100 name = "tip_teloslozheniya" /></label>
+
+            <table id="mainTable">
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">ПП</label>
+                    </td>
+                    <td><input type="number" class="form-control" size="40" maxlength=100 name = "pp" /> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">ФИО</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "fio" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Пол</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "pol" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Дата рождения</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "data_r" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Дата осмотра</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "data_osmotra" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Длина тела, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "dlina_tela" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Масса тела, кг</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "massa_tela" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность грудной клетки, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_grudnoi_kletki" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность талии, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_talii" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность правого плеча, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_pravogo_plecha" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность левого плеча, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_levogo_plecha" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность бедер, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_beder" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность шеи, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_shei" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Окружность запястья, см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "okruznost_zapastya" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Жизненная емкость легких, л</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "zhiznennaya_emkost_legk" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Динамометрия правой кисти, кг</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "dinamometriya_pravoy_kisti" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Динамометрия левой кисти, кг</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "dinamometriya_levoy_kisti" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Сист.артериальное давление, мм рт.ст.</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "sist_arter_davlenie" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Диаст.артериальное давление, мм рт.ст.</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "dist_arter_davlenie" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Частота сердечных сокращений</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "chastota_serd_sokr" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Толщина жировой складки (живот), см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "tolshina_zhirovoy_skladki_zhivot" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Толщина жировой складки (плечо), см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "tolshina_zhirovoy_skladki_plecho" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Толщина жировой складки (спина), см</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "tolshina_zhirovoy_skladki_spina" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="font-size: 15px; color: black">Тип телосложения</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" size="40" maxlength=100 name = "tip_teloslozheniya" />
+                    </td>
+                </tr>
+
+            </table>
+
             <br>
             <p><input type = "submit" class="btn btn-warning" value = "Отравить данные" /></p>
-
+{#            <p><button type="button" class="btn btn-warning" onclick="data()">Посмотреть все данные#}
+{##}
+{#            </button></p>#}
         </form>
 
+      </button>
+
+      <br>
+      <br>
     <script type="text/javascript">
+        {#function data(){#}
+        {#    df = pd.read_excel('vershion2.xlsm',sheet_name='Итог')#}
+        {#    return df.to_html()#}
 		function init() {
           window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
           if (('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
@@ -111,12 +271,12 @@
               speech.listening = !speech.listening;
               if (speech.listening) {
                 toggle.classList.add('listening');
-                toggle.innerText = 'Listening ...';
+                toggle.innerText = 'Говорите ...';
                 speech.recognition.start();
               }
               else {
                 toggle.classList.remove('listening');
-                toggle.innerText = 'Toggle listening';
+                toggle.innerText = 'Запись приостановлена';
                 speech.recognition.stop();
               }
             })
@@ -124,9 +284,10 @@
         }
         init();
 
-      </script>
-  </div>
 
+      </script>
+
+  </div>
 
 </body>
 </html>
