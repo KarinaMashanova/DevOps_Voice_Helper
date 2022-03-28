@@ -2,19 +2,20 @@
 <html>
 <head>
     <title>Введите данные</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
     <div id="result">
-        <table>
+        <table id="tblData" class="table table-bordered">
         <tr>
             {% for header in headings %}
-                <th>{{ header }}</th>
+                <th >{{ header }}</th>
             {% endfor %}
         </tr>
         <tr>
             {%  for key, value in result.items() %}
-                <td>{{ value }}</td>
+                <td >{{ value }}</td>
             {% endfor %}
         </tr>
         </table>

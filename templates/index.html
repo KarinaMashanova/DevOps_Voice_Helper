@@ -17,8 +17,6 @@
 </head>
 <body>
 
-<form class="" action="data" method="post">
-</form>
   <h1 align="center">
       <span style="color: #ff7e00">Заполните данные о состоянии ребенка </span>
       <br>
@@ -26,15 +24,14 @@
   </h1>
   <center><h3>Введите данные вручную или же используйте голосовой ввод</h3></center>
   <br>
-
   <div id="result1" align="center">
       <br>
         <form action = "result" method = "POST">
             <code id="result">Запись ...</code>
             <button type="button" class="btn btn-warning" id="toggle">Ввести данные голосом</button>
             <br>
-
-            <table id="mainTable">
+            <br>
+            <table id="tblData">
                 <tr>
                     <td>
                         <label style="font-size: 15px; color: black">ПП</label>
@@ -225,24 +222,13 @@
                         <input type="text" class="form-control" size="40" maxlength=100 name = "tip_teloslozheniya" />
                     </td>
                 </tr>
-
             </table>
-
             <br>
-            <p><input type = "submit" class="btn btn-warning" value = "Отравить данные" /></p>
-{#            <p><button type="button" class="btn btn-warning" onclick="data()">Посмотреть все данные#}
-{##}
-{#            </button></p>#}
+            <p><input type = "submit" class="btn btn-warning" value = "Вывести данные" /></p>
         </form>
-
-      </button>
-
       <br>
       <br>
     <script type="text/javascript">
-        {#function data(){#}
-        {#    df = pd.read_excel('vershion2.xlsm',sheet_name='Итог')#}
-        {#    return df.to_html()#}
 		function init() {
           window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
           if (('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
@@ -283,10 +269,7 @@
           }
         }
         init();
-
-
       </script>
-
   </div>
 
 </body>
