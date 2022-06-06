@@ -44,6 +44,7 @@ jobs:
         with:
           packages: |
             pytest
+            pandas
       - name: Package Application
         uses: JackMcKew/pyinstaller-action-windows@main
         with:
