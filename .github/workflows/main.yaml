@@ -22,6 +22,7 @@ jobs:
   flake8-lint:
     runs-on: ubuntu-latest
     name: Lint
+    needs: build
     steps:
       - name: Check out source repository
         uses: actions/checkout@v2
@@ -31,3 +32,35 @@ jobs:
           python-version: "3.8"
       - name: flake8 Lint
         uses: py-actions/flake8@v2
+
+
+
+
+  third-job:
+    runs-on: ubuntu-latest
+    name: slave
+    needs: flake8-lint
+    if: ${{ always() }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+      - uses: BSFishy/pip-action@v1
+        with:
+          packages: |
+            pandas
+            flask
+            xlwings
+      - run: python main.py
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: ${{runner.workspace}}/flaskProject/vershion2.xlsm
+          retention-days: 1
+      - uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          document: ${{runner.workspace}}/flaskProject/vershion2.xlsm
+          message: |
+            Отправь центильные таблицы
