@@ -50,7 +50,7 @@ jobs:
             pandas
             flask
             xlwings
-      - run: python main.py
+      - run: python app.py
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
