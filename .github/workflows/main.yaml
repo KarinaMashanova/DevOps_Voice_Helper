@@ -22,7 +22,7 @@ jobs:
   flake8-lint:
     runs-on: ubuntu-latest
     name: Lint
-    needs: build
+    needs: Notify_in_Telegram
     steps:
       - name: Check out source repository
         uses: actions/checkout@v2
